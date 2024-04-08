@@ -65,3 +65,75 @@ const profile = {
 console.log(profile)
 console.log(typeof(profile))
 console.log(typeof(profile.likes))
+
+
+
+// Operators
+
+let x = 3;
+let y = 2;
+console.log(x + y)
+console.log(x - y)
+console.log(x * y)
+console.log(x / y)
+console.log(x % y)
+console.log(x ** y)
+x++;
+console.log(x)
+x--
+console.log(x)
+
+x = 10
+console.log('x++ =', x++)
+console.log(x)
+console.log('++x =', ++x)
+
+x = 20;
+y = 23;
+console.log(x += 2)
+console.log(x -= 2)
+
+console.log(x *= 2)
+console.log(x /= 2)
+console.log(x **= 2)
+
+x = 100;
+y = 100;
+z = x == y;
+console.log(z)
+
+z = x != y;
+console.log(z)
+
+z = x === y;
+console.log(z)
+
+z = x > y;
+console.log(z)
+
+z = x < y;
+console.log(z)
+
+z = x >= y;
+console.log(z)
+
+z = x <= y;
+console.log(z)
+
+const m = 130;
+const n = 130;
+con1 = m === n;
+con2 = n > m;
+console.log('x && y =', con1 && con2)
+
+
+con3 = m || n
+console.log(con1)
+
+
+const p = 100;
+const q = 100;
+
+con1 = p === q;
+
+console.log(!con1)

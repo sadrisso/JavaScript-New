@@ -37,3 +37,22 @@ let mobilePrice = 10000;
 con7 = mobilePrice > 5000 && mobilePrice <= 20000 ? 'entry level' : 'flagship';
 console.log(con7)
       
+
+let a = 10;
+
+switch(a){
+    case 10:
+        console.log('ten')
+        break;
+    case 20:
+        console.log('twinty')
+        break;
+    case 30:
+        console.log('thirty')
+        break;
+    case 50:
+        console.log('fifty')
+        break;
+    default:
+        console.log('not ten to fifty')
+}   

@@ -55,4 +55,3 @@ if(number % 3 == 0 || number % 1 == 0){
     console.log('not divisible by 3 or 1')
 }
     
-

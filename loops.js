@@ -64,3 +64,17 @@ for (let value of str){
     size ++;
 }   
 console.log('Drisso size is =', size)
+
+
+// for in loop
+
+const student = {
+    name : 'Rahul Kumar',
+    age : 22,
+    roll : 1,
+    id : 101
+}
+
+for (let i in student){
+    console.log('key = ', i , 'value = ', student[i])
+}

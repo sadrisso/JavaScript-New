@@ -52,3 +52,15 @@ do {
     console.log(a)
     a++
 }while(a >= 10)
+
+
+// for of loop
+
+let str = 'Drisso';
+let size = 0;
+
+for (let value of str){
+    console.log('value = ', value)
+    size ++;
+}   
+console.log('Drisso size is =', size)

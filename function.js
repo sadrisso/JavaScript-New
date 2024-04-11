@@ -84,3 +84,38 @@ const str = (str) => {
 }
 
 str('Bangladesh');
+
+
+// For each function for array
+
+let value = ['Delhi', 'Bangalore', 'Chennai', 'Pune'];
+let numbers = [1,2,3,4,5];
+
+value.forEach((val, i) => {
+    console.log(i, 'The values are =', val)
+})
+
+numbers.forEach((nums, idx, arr) => {
+    console.log(idx, nums, arr)
+})
+
+// for each function is not for single string 
+// let stri = 'Drisso';
+// stri.forEach((s) => {
+//     console.log(s)
+// })
+
+
+
+// For a given array of numbers, print the square of each value using the for each loop
+
+let nums = [2,4,6,8];
+nums.forEach((n) => {
+    console.log(n**2)
+})
+
+let calcSquare = (nums) => {
+    console.log(nums**2)
+}
+
+nums.forEach(calcSquare)

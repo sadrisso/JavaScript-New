@@ -119,3 +119,7 @@ let calcSquare = (nums) => {
 }
 
 nums.forEach(calcSquare)
+
+
+
+

@@ -31,3 +31,18 @@ divs[0].style.fontSize = '28px';
 divs[1].style.fontSize = '30px';
 divs[2].style.color = 'white';
 divs[2].style.visibility = 'hidden';
+
+
+// Create element
+
+let myBtn = document.createElement('button');
+myBtn.innerText = 'Click me!';
+
+let body = document.querySelector('body');
+body.append(myBtn);
+
+let headDiv = document.querySelector('.headDiv');
+headDiv.prepend(myBtn);
+
+let scriptTag = document.querySelector('script');
+scriptTag.after(myBtn)

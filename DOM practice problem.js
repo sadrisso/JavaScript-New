@@ -46,3 +46,25 @@ headDiv.prepend(myBtn);
 
 let scriptTag = document.querySelector('script');
 scriptTag.after(myBtn)
+
+
+// Create a new button element. Give it a text 'Click Me', background color of red and text color of white
+// Insert the button as the first element inside body tag?
+
+let button = document.createElement('button');
+button.innerHTML = '<i>Click Me!</i>';
+button.style.backgroundColor = 'red';
+button.style.color = 'white';
+button.style.border = 'red';
+let b = document.querySelector('body');
+b.prepend(button);
+
+
+// Create a p tag in html give it a class and some styling
+// Now create a new class in CSS and try to append this class to the p element
+// Did you notice how you overWrite the class name when you add a new one?
+// Solve this problem using classList.
+
+
+let myPera = document.querySelector('.myPera');
+myPera.classList.add('yourPera');

@@ -34,3 +34,28 @@ btn.addEventListener('click', (evt) => {
     console.log(evt);
     console.log('Clicked 3');
 });
+
+
+// Create a toggle button that changes the screen to dark-mode when clicked and light mode when again clicked;
+
+let crntMode = 'light';
+let body = document.querySelector('body')
+
+btn.addEventListener('click', () => {
+    if (crntMode === 'light') {
+        crntMode = 'dark';
+        body.style.backgroundColor = 'black';
+    } else {
+        crntMode = 'light';
+        body.style.backgroundColor = 'white';
+    }
+
+    console.log(crntMode)
+});
+
+
+let div2 = document.querySelector('.container2');
+
+div2.addEventListener('mouseover', () => {
+    body.style.backgroundColor = 'red';
+});

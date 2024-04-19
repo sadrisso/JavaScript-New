@@ -18,28 +18,22 @@ h1 {
 .choice:hover {
     opacity: 50%;
     cursor: pointer;
+    background-color:black;
 }
 .choice {
-    height: 250px;
-    width: 250px;
-}
-.rock {
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
-    height: 160px;
-    width: 160px;
-    margin: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
-.paper {
+img {
     border-radius: 50%;
-    margin: 50px;
-}
-.scissors {
-    border-radius: 50%;
-    margin: 50px;
 }
 .score-board {
     text-align: center;
-    background-color: cornflowerblue;
+    margin-top: 2rem;
     height: 6rem;
     display: flex;
     align-items: center;
@@ -47,12 +41,20 @@ h1 {
     gap: 3rem;
 }
 .msg-container {
-    text-align: center;
-    background-color: chartreuse;
-    height: 5rem;
-    line-height: 5rem;
-    font-size: 1.5rem;
+   margin-top: 3rem;
+   display: flex;
+   justify-content: center;
 }
-.score {
-    font-size: 1.5rem;
+
+#msg {
+    display: inline;
+    font-size: 2rem;
+    background-color:darkcyan;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#user-score, #comp-score {
+    font-size: 3rem;
 }

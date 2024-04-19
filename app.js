@@ -12,5 +12,15 @@ choices.forEach((choice) => {
 
 const playGame = (userChoice) => {
     console.log('User choice =',userChoice)
+    let compChoice = genCompChoice();
+    console.log('Computer choice =', compChoice)
 }
+
+const genCompChoice = () => {
+    let idx = Math.floor(Math.random() * 3);
+    let options = ['rock', 'paper', 'scissors'];
+    return options[idx];
+}
+
+
  

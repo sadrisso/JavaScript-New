@@ -8,12 +8,28 @@ choices.forEach((choice) => {
         playGame(userChoice)
     });
 })
-
+const drawGame = () => {
+    console.log('Draw!')
+}
 
 const playGame = (userChoice) => {
     console.log('User choice =',userChoice)
     let compChoice = genCompChoice();
     console.log('Computer choice =', compChoice)
+
+    if (userChoice === compChoice) {
+        drawGame();
+    } else {
+        let userWin = true;
+        if (userChoice === 'rock') {
+            userWin = compChoice === 'paper' ? false : true;
+        } else if (userChoice === 'scissors') {
+            userWin = compChoice === 'rock' ? false : true;
+        } else {
+            userWin = compChoice === 'rock' ? true : false; 
+        }
+        showWinner(userWin);
+    }
 }
 
 const genCompChoice = () => {
@@ -22,5 +38,11 @@ const genCompChoice = () => {
     return options[idx];
 }
 
-
+const showWinner = (userWin) => {
+    if (userWin) {
+        console.log('You win..')
+    } else {
+        console.log('You lose!')
+    }
+}
  

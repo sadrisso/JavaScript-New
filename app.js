@@ -1,6 +1,10 @@
 let userScore = 0;
 let compScore = 0;
 
+const msg = document.querySelector('#msg');
+const userScorePera = document.querySelector('#user-score');
+const compScorePera = document.querySelector('#comp-score');
+
 const choices = document.querySelectorAll('.choice');
 choices.forEach((choice) => {
     choice.addEventListener('click', () => {
@@ -10,6 +14,8 @@ choices.forEach((choice) => {
 })
 const drawGame = () => {
     console.log('Draw!')
+    msg.innerText = 'Game was draw!!';
+    msg.style.backgroundColor = 'yellow';
 }
 
 const playGame = (userChoice) => {
@@ -28,7 +34,7 @@ const playGame = (userChoice) => {
         } else {
             userWin = compChoice === 'rock' ? true : false; 
         }
-        showWinner(userWin);
+        showWinner(userWin, compChoice, userChoice);
     }
 }
 
@@ -38,11 +44,19 @@ const genCompChoice = () => {
     return options[idx];
 }
 
-const showWinner = (userWin) => {
+const showWinner = (userWin, compChoice, userChoice) => {
     if (userWin) {
         console.log('You win..')
+        msg.innerText = `You win your ${userChoice} beats ${compChoice}`;
+        msg.style.backgroundColor = 'green';
+        userScore++;
+        userScorePera.innerText = userScore;
     } else {
         console.log('You lose!')
+        msg.innerText = `You lost ${compChoice} beats your ${userChoice}`;
+        msg.style.backgroundColor = 'red';
+        compScore++;
+        compScorePera.innerText = compScore;
     }
 }
  

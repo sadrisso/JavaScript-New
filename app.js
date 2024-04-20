@@ -19,9 +19,7 @@ const drawGame = () => {
 }
 
 const playGame = (userChoice) => {
-    console.log('User choice =',userChoice)
     let compChoice = genCompChoice();
-    console.log('Computer choice =', compChoice)
 
     if (userChoice === compChoice) {
         drawGame();

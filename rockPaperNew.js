@@ -17,18 +17,25 @@ const playGame = (userChoice) => {
         console.log(`Draw !! Comp choice is ${compChoice} Your ${userChoice}`)
         result.innerText = `Draw !! Comp choice is ${compChoice} Your ${userChoice}`;
     } else {
-        userChoice = true;
-        if(userChoice = 'rock') {
-            userChoice = compChoice === 'paper' ? false : true;
-        } else if(userChoice = 'paper') {
-            userChoice = compChoice === 'scissor' ? false : true;
+        userVal = true;
+        if(userChoice === 'rock') {
+            userVal = compChoice === 'paper' ? false : true;
+        } else if(userChoice === 'paper') {
+            userVal = compChoice === 'scissor' ? false : true;
         } else {
-            userChoice = compChoice === 'rock' ? false : true;
+            userVal = compChoice === 'rock' ? false : true;
         }
+        showWinner(userChoice, compChoice, userVal)
     }
 }
 
-
+const showWinner = (userChoice, compChoice, userVal) => {
+    if (userVal) {
+        result.innerText = `You won your choice is ${userChoice} Comp choice is ${compChoice}`
+    } else {
+        result.innerText = `You lost! Comp choice is ${compChoice} Your choice is ${userChoice}`
+    }
+}
 
 const genCompChoice = () => {
     let options = ['rock', 'paper', 'scissor'];

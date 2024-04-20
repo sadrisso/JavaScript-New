@@ -12,18 +12,31 @@
             <h1>Rock Paper Game</h1>
         </div>
         <div class="body">
-            <img src="image/rock.jpg" alt="image" class="rock">
-            <img src="image/paper.jpg" alt="image" class="paper">
-            <img src="image/scissor.jpg" alt="image" class="scissor">
+            <div class="choice">
+                <img src="image/rock.jpg" alt="image" id="rock">
+            </div>
+            <div class="choice">
+                <img src="image/paper.jpg" alt="image" id="paper">
+            </div>
+            <div class="choice">
+                <img src="image/scissor.jpg" alt="image" id="scissor">
+            </div>
+        </div>
+        <div class="score-card">
+            <div class="score">
+                <p class="comp-score">0</p>
+                <p>Your score</p>
+            </div>
+            <div class="score">
+                <p class="user-score">0</p>
+                <p>Comp score</p>
+            </div>
         </div>
         <div class="footer">
-            <div class="result">
-                <p>Your score: <span class="user-score">0</span></p>
-                <p>Comp score: <span class="comp-score">0</span></p>
-            </div>
             <p class="result-pera">Play your move!</p>
         </div>
     </div>
+    
     <script src="rockPaperNew.js"></script>
 </body>
 </html>

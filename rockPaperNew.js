@@ -1,6 +1,11 @@
 
 let choices = document.querySelectorAll('.choice');
 let result = document.querySelector('.result-pera')
+let user_score = document.querySelector('.user-score');
+let comp_score = document.querySelector('.comp-score');
+let footer = document.querySelector('.footer');
+let userScore = 0;
+let compScore = 0;
 
 choices.forEach((choice) => {
     let userChoice = choice.getAttribute('id');
@@ -16,6 +21,7 @@ const playGame = (userChoice) => {
     if (userChoice === compChoice) {
         console.log(`Draw !! Comp choice is ${compChoice} Your ${userChoice}`)
         result.innerText = `Draw !! Comp choice is ${compChoice} Your ${userChoice}`;
+        footer.style.backgroundColor = 'blue';
     } else {
         userVal = true;
         if(userChoice === 'rock') {
@@ -31,9 +37,15 @@ const playGame = (userChoice) => {
 
 const showWinner = (userChoice, compChoice, userVal) => {
     if (userVal) {
-        result.innerText = `You won your choice is ${userChoice} Comp choice is ${compChoice}`
+        result.innerText = `You won your choice is ${userChoice} Comp choice is ${compChoice}`;
+        userScore++;
+        user_score.innerText = userScore;
+        footer.style.backgroundColor = 'green';
     } else {
-        result.innerText = `You lost! Comp choice is ${compChoice} Your choice is ${userChoice}`
+        result.innerText = `You lost! Comp choice is ${compChoice} Your choice is ${userChoice}`;
+        compScore++;
+        comp_score.innerText = compScore;
+        footer.style.backgroundColor = 'red';
     }
 }
 

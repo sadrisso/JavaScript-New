@@ -1,4 +1,6 @@
 
+let msg = document.querySelector('.msg');
+
 let choices = document.querySelectorAll('.choice');
 choices.forEach((choice) => {
     choice.addEventListener('click', () => {
@@ -15,7 +17,8 @@ const playGame = (userChoice) => {
     console.log(`Comp choice is ${compChoice}`);
 
     if (userChoice === compChoice) {
-        console.log('Draw');
+        console.log('DRAW');
+        msg.style.backgroundColor = 'yellow';
     } else {
         let userVal = true;
         if (userChoice === 'rock') {
@@ -25,7 +28,19 @@ const playGame = (userChoice) => {
         } else {
             userVal = compChoice === 'rock' ? false : true;
         }
+        showResult(userVal, userChoice, compChoice);
+    }
+}
 
+const showResult = (userVal, userChoice, compChoice) => {
+    if (userVal) {
+        console.log(`You win, your choice is ${userChoice} comp choice is ${compChoice}`);
+        msg.innerText = 'You win CONGRATULATIONS!';
+        msg.style.backgroundColor = 'green';
+    } else {
+        console.log(`You lost, comp choice is ${compChoice} your choice is ${userChoice}`);
+        msg.innerText = 'You lost TRY AGAIN!';
+        msg.style.backgroundColor = 'red';
     }
 }
 

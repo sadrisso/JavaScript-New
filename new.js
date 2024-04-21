@@ -1,5 +1,10 @@
 
 let msg = document.querySelector('.msg');
+let msgPera = document.querySelector('.msg-pera');
+let compScore = document.querySelector('.comp-score');
+let userScore = document.querySelector('.user-score');
+let cScore = 0;
+let uScore = 0;
 
 let choices = document.querySelectorAll('.choice');
 choices.forEach((choice) => {
@@ -18,6 +23,8 @@ const playGame = (userChoice) => {
 
     if (userChoice === compChoice) {
         console.log('DRAW');
+        msg.innerText = 'DRAW';
+        msgPera.innerText = 'draw...';
         msg.style.backgroundColor = 'yellow';
     } else {
         let userVal = true;
@@ -34,11 +41,15 @@ const playGame = (userChoice) => {
 
 const showResult = (userVal, userChoice, compChoice) => {
     if (userVal) {
-        console.log(`You win, your choice is ${userChoice} comp choice is ${compChoice}`);
+        msgPera.innerText = `You win, your choice is ${userChoice} comp choice is ${compChoice}`;
+        uScore++;
+        userScore.innerText = uScore;
         msg.innerText = 'You win CONGRATULATIONS!';
         msg.style.backgroundColor = 'green';
     } else {
-        console.log(`You lost, comp choice is ${compChoice} your choice is ${userChoice}`);
+        msgPera.innerText = `You lost, comp choice is ${compChoice} your choice is ${userChoice}`;
+        cScore++;
+        compScore.innerText = cScore;
         msg.innerText = 'You lost TRY AGAIN!';
         msg.style.backgroundColor = 'red';
     }
